@@ -54,12 +54,22 @@ nav {
     font-size: 2rem;
     margin-top: 5rem;
     border: 2px solid #e62221;
-    transition: 0.2s
+    transition: 0.2s;
+    z-index: 100;
+    position: absolute;
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none;
+    color: white
 }
 
 .button:hover {
-    background-color: white;
-    color: #e62221;
     cursor: pointer
 }
 
