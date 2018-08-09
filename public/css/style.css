@@ -39,11 +39,13 @@ nav {
 }
 
 .tagline {
-    font-size: 5rem;
+    font-size: 12rem;
     font-weight: bolder;
     width: 40%;
-    line-height: 6rem;
-    margin-top: 20rem
+    line-height: 10rem;
+    margin-top: 35%;
+    color: white;
+    opacity: 0.9
 }
 
 .button {
@@ -78,44 +80,48 @@ a:hover {
     color: white;
     text-align: center;
     font-size: 2.5rem;
-    padding: 12rem 0rem
+    padding: 0rem 0rem 3rem 0rem
 }
 
-.about {
-    padding: 5rem 10%
+.sec {
+    padding: 4rem 4rem 0rem 4rem
 }
 
-.aboutHead {
-    text-align: center;
-    font-size: 4rem;
+.secHead {
+    color: grey;
+    font-size: 4rem
 }
 
-.aboutText {
-    font-size: 1.6rem;
-    text-align: center;
-    padding: 0rem 15rem
+#changeRed {
+    color: #ed3237 !important;
+    font-weight: 700
 }
 
-.aboutButton {
-    text-align: center;
-    border: 2px solid #e62223;
-    color: #e62223;
-    font-weight: 500;
-    font-size: 1.7rem;
+.secLeft,
+.secRight {
+    display: inline-block
+}
+
+.secButton {
+    background-color: #e43d45;
     display: inline-block;
-    padding: 1rem;
-    margin-left: 44%;
-    margin-top: 1rem
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    color: white;
+    font-size: 2rem
 }
 
-.icons {
-    text-align: center;
-    margin-top: 4rem
+.secLeft {
+    width: 50%;
 }
 
-.icons img {
-    width: 70%;
-    margin: 0% 15%
+.secRight {
+    width: 40%;
+}
+
+.secRight img {
+    width: 100%;
+    margin-left: 15%
 }
 
 .sectionText {
@@ -130,6 +136,74 @@ a:hover {
 .sideCard,
 .midCard {
     background-color: #ececec
+}
+
+.about .row {
+    width: 100%;
+    padding: 0;
+    margin: 0
+}
+
+.about .col-md-3 {
+    padding: 0;
+    margin: 0;
+}
+
+.aboutIcon img {
+    width: 30%
+}
+
+.aboutSection {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 8rem 2rem !important
+}
+
+.aboutSection1 {
+    background-color: #ececec;
+    text-align: center;
+    padding: 8rem 2rem !important
+}
+
+.aboutName {
+    font-size: 2rem;
+    font-weight: 500;
+    color: grey;
+    margin-top: 1.5rem
+}
+
+.aboutLine {
+    background-color: #e43d45;
+    width: 60%;
+    margin: 2rem 0rem;
+    margin-left: 20%;
+    height: 2px
+}
+
+.phoneLeft {
+    width: 30%;
+    display: inline-block;
+}
+
+.phoneLeft img {
+    width: 60%;
+    margin-top: -5rem
+}
+
+.phoneTitle {
+    font-weight: 700;
+    text-align: left;
+    font-size: 4rem
+}
+
+.phoneText {
+    text-align: left;
+    font-size: 1.5rem
+}
+
+.phoneRight {
+    width: 65%;
+    display: inline-block;
 }
 
 .cardHead {
@@ -181,25 +255,24 @@ a:hover {
 }
 
 .stayfit {
-    color: #e62221;
+    color: #ffffff;
     font-family: arial;
     font-weight: bolder;
     font-size: 26rem;
     position: absolute;
-    top: 28rem;
-    opacity: 0.1;
+    top: 26rem;
+    opacity: 0.2;
     right: 0;
 }
 
 .academy {
-    color: #e62221;
+    color: #ffffff;
     font-family: arial;
     font-weight: bolder;
     font-size: 28rem;
     position: absolute;
     bottom: 0;
     opacity: 0.1;
-    right: 0
 }
 
 .footer {
