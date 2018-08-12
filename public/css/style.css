@@ -399,7 +399,7 @@ a:hover {
     margin-top: 8rem
 }
 
-. @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle {
         background-color: #333;
@@ -417,27 +417,52 @@ a:hover {
         font-size: 1.5rem
     }
     .banner {
-        background-position: center
+        background-position: left
     }
     .tagline {
-        font-size: 2.5rem;
-        line-height: 3rem;
+        font-size: 6rem;
+        line-height: 7rem;
+        margin-top: 50%
+    }
+    .sec {
+        padding: 2rem 2rem 0rem 2rem;
+    }
+    .secHead {
+        color: grey;
+        font-size: 3rem
+    }
+    .secLeft,
+    .secRight {
+        display: inline-block
+    }
+    .secLeft {
+        width: 100%;
+    }
+    .secRight {
+        width: 100%;
     }
     .section1 {
-        font-size: 2rem;
+        font-size: 0rem;
         padding: 7rem 3rem
     }
-    .about {
-        padding: 5rem 3rem
+    .aboutSection {
+        padding: 2rem !important
+    }
+    .aboutSection1 {
+        padding: 2rem !important
+    }
+    .optionName,
+    .optionPrice {
+        font-size: 01rem !important
+    }
+    .aboutName {
+        font-size: 1.5rem
     }
     .aboutHead {
         font-size: 3rem;
     }
     .aboutText {
-        font-size: 1.6rem;
-        text-align: center;
-        padding: 0rem;
-        margin-top: 1rem
+        font-size: 1.3rem;
     }
     .aboutButton {
         margin-left: 35%;
@@ -551,5 +576,28 @@ a:hover {
         text-align: center;
         padding: 1rem;
         margin-top: 0.5rem
+    }
+    .memberRow {
+        margin: 2rem 0rem;
+        padding: 0rem 3rem 1rem 3rem;
+        color: white;
+        border-top: 110px solid #e43d45;
+        border-right: 90px solid transparent;
+        margin-top: -20px
+    }
+    .memberText {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .phoneLeft {
+        width: 100%;
+    }
+    .phoneRight {
+        width: 100%;
+    }
+    .phoneTitle {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem
     }
 }
