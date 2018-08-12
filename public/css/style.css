@@ -84,7 +84,7 @@ a:hover {
 }
 
 .sec {
-    padding: 4rem 4rem 0rem 4rem
+    padding: 12rem 4rem 0rem 4rem
 }
 
 .secHead {
@@ -144,7 +144,7 @@ a:hover {
     margin: 0
 }
 
-.about .col-md-3 {
+.about .col-md-4 {
     padding: 0;
     margin: 0;
 }
@@ -358,7 +358,48 @@ a:hover {
     font-size: 1.7rem;
 }
 
-@media screen and (max-width: 600px) {
+.membership {
+    background-image: url('../assets/membership.jpg');
+    padding: 4rem 0rem;
+    background-size: cover
+}
+
+.memberHeading {
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder
+}
+
+.memberText {
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.memberRow {
+    margin: 2rem 0rem;
+    padding: 1rem 3rem;
+    color: white;
+    border-top: 100px solid #e43d45;
+    border-right: 80px solid transparent;
+    height: 0;
+    margin-top: -10px
+}
+
+.memberHead {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-top: -100px
+}
+
+.memberItem {
+    margin-top: 8rem
+}
+
+. @media screen and (max-width: 600px) {
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle {
         background-color: #333;
