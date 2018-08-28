@@ -413,6 +413,24 @@ a:hover {
     border: none
 }
 
+@media screen and (max-width:1000px) {
+    .memberRow {
+        margin: 2rem 0rem;
+        padding: 0rem 3rem 1rem 3rem;
+        color: white;
+        border-top: 130px solid #e43d4594;
+        border-right: 90px solid transparent;
+        margin-top: 0px
+    }
+    .optionName,
+    .optionPrice {
+        font-size: 1.3rem !important
+    }
+    .memberHead {
+        margin-top: -120px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle {
@@ -470,7 +488,7 @@ a:hover {
     }
     .optionName,
     .optionPrice {
-        font-size: 01rem !important
+        font-size: 1rem !important
     }
     .aboutName {
         font-size: 1.5rem
@@ -599,9 +617,12 @@ a:hover {
         margin: 2rem 0rem;
         padding: 0rem 3rem 1rem 3rem;
         color: white;
-        border-top: 110px solid #e43d45;
+        border-top: 110px solid #e43d4594;
         border-right: 90px solid transparent;
         margin-top: -20px
+    }
+    .memberHead {
+        margin-top: -100px;
     }
     .memberText {
         width: 80%;
