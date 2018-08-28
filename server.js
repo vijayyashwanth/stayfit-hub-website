@@ -8,4 +8,4 @@ app.use(bodyParser.json());
 
 var port = Number(process.env.PORT || 5002);
 app.listen(port);
-console.log("Server Running")
+console.log("Server Running on port 5002.")

@@ -261,8 +261,10 @@ a:hover {
     font-size: 26rem;
     position: absolute;
     top: 26rem;
-    opacity: 0.2;
+    line-height: 26rem;
+    opacity: 0.1;
     right: 0;
+    background-color: transparent;
 }
 
 .academy {
@@ -382,7 +384,7 @@ a:hover {
     margin: 2rem 0rem;
     padding: 1rem 3rem;
     color: white;
-    border-top: 100px solid #e43d45;
+    border-top: 100px solid #e43d4594;
     border-right: 80px solid transparent;
     height: 0;
     margin-top: -10px
@@ -399,7 +401,15 @@ a:hover {
     margin-top: 8rem
 }
 
-@media screen and (max-width: 600px) {
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle {
+    background-color: #333;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border: none
+}
+
+@media screen and (max-width: 800px) {
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle {
         background-color: #333;
@@ -437,9 +447,12 @@ a:hover {
     }
     .secLeft {
         width: 100%;
+        padding: 2rem
     }
     .secRight {
-        width: 100%;
+        display: none;
+        width: 40%;
+        margin-left: 50%
     }
     .section1 {
         font-size: 0rem;
@@ -519,14 +532,15 @@ a:hover {
         color: white
     }
     .stayfit {
-        color: #e62221;
+        color: #ffffff;
         font-family: arial;
         font-weight: bolder;
-        font-size: 26rem;
+        font-size: 16rem;
         position: absolute;
         top: 28rem;
         opacity: 0.1;
         right: 0;
+        line-height: 16rem;
     }
     .academy {
         color: #e62221;
