@@ -1,5 +1,8 @@
 body {
     font-family: Raleway;
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0pc !important
 }
 
 .navbar {
@@ -617,12 +620,12 @@ a:hover {
         margin: 2rem 0rem;
         padding: 0rem 3rem 1rem 3rem;
         color: white;
-        border-top: 110px solid #e43d4594;
+        border-top: 130px solid #e43d4594;
         border-right: 90px solid transparent;
         margin-top: -20px
     }
     .memberHead {
-        margin-top: -100px;
+        margin-top: -120px;
     }
     .memberText {
         width: 80%;
