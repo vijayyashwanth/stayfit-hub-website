@@ -192,7 +192,7 @@ a:hover {
 
 .phoneTitle {
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     font-size: 4rem
 }
 
@@ -275,6 +275,10 @@ a:hover {
     position: absolute;
     bottom: 0;
     opacity: 0.1;
+}
+
+.phoneText img {
+    width: 100%
 }
 
 .footer {
