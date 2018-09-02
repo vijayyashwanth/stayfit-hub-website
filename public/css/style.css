@@ -105,12 +105,17 @@ a:hover {
 }
 
 .sec {
-    padding: 12rem 4rem 0rem 4rem
+    padding: 6rem 4rem 0rem 4rem
 }
 
 .secHead {
     color: grey;
     font-size: 4rem
+}
+
+.secText {
+    font-size: 1.5rem;
+    text-align: justify
 }
 
 #changeRed {
@@ -426,6 +431,50 @@ a:hover {
     margin-top: 8rem
 }
 
+.story {
+    background-image: url('../assets/story.jpg');
+    background-size: cover;
+    padding: 8rem 4rem 0rem 3rem;
+    min-height: 80vh;
+    background-position: right
+}
+
+.storyHead {
+    text-align: right;
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #ed3137
+}
+
+.storyText {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: justify
+}
+
+.circles {
+    text-align: center;
+    margin-top: 4rem
+}
+
+.mission,
+.vision {
+    background-color: #ed3137;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+    border-radius: 50%;
+    color: white;
+    padding: 3.5rem;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.vision {
+    margin-left: 4rem
+}
+
 .navbar-inverse .navbar-toggle,
 .navbar-inverse .navbar-toggle {
     background-color: #333;
@@ -450,9 +499,44 @@ a:hover {
     .memberHead {
         margin-top: -120px;
     }
+    .story {
+        background-position: right;
+    }
+    .storyText {
+        margin-left: 30%
+    }
+    .circles {
+        text-align: center;
+        margin-top: 1rem
+    }
+    .mission,
+    .vision {
+        background-color: #ed3137;
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+        border-radius: 50%;
+        color: white;
+        padding: 2rem;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .storyText {
+        margin-left: 0
+    }
 }
 
 @media screen and (max-width: 800px) {
+    .storyHead {
+        font-size: 3rem
+    }
+    .storyHead {
+        text-align: center
+    }
     .navbar-inverse .navbar-toggle,
     .navbar-inverse .navbar-toggle {
         background-color: #333;
