@@ -5,6 +5,11 @@ body {
     margin: 0pc !important
 }
 
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 .navbar {
     background-color: white;
     border: none;
@@ -357,7 +362,6 @@ a:hover {
 .contact {
     background-color: #000000;
     color: white;
-    padding: 2rem;
     text-align: center;
 }
 
@@ -411,8 +415,8 @@ a:hover {
 }
 
 .memberRow {
-    margin: 2rem 0rem;
-    padding: 1rem 3rem;
+    margin: 0rem 0rem;
+    padding: 1rem 0rem;
     color: white;
     border-top: 100px solid #e43d4594;
     border-right: 80px solid transparent;
@@ -469,10 +473,8 @@ a:hover {
     font-weight: bolder;
     text-align: center;
     font-size: 2rem;
-}
-
-.vision {
-    margin-left: 4rem
+    margin-left: 4rem;
+    margin-bottom: 1rem
 }
 
 .navbar-inverse .navbar-toggle,
@@ -481,6 +483,57 @@ a:hover {
     margin-top: 3rem;
     margin-bottom: 2rem;
     border: none
+}
+
+.contact iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem
+}
+
+.contactFormHead {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 3rem
+}
+
+.contact .container {
+    width: 100%;
+    background-color: #252525;
+}
+
+.contact label,
+.contact input,
+.contact textarea,
+.contact button {
+    width: 100%;
+    text-align: left
+}
+
+.contact input,
+.contact textarea {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: grey
+}
+
+.contact button {
+    background-color: #e43d45;
+    border: none;
+    outline: none;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem
+}
+
+.contactContainer {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    padding-bottom: 2rem
 }
 
 @media screen and (max-width:1000px) {
@@ -500,10 +553,9 @@ a:hover {
         margin-top: -120px;
     }
     .story {
+        background-image: none;
+        background-color: #f5f5f5;
         background-position: right;
-    }
-    .storyText {
-        margin-left: 30%
     }
     .circles {
         text-align: center;
@@ -528,9 +580,35 @@ a:hover {
     .storyText {
         margin-left: 0
     }
+    .navbar-brand img {
+        width: 200px;
+        margin-top: 1.2rem
+    }
+    .navbar {
+        width: 100vw;
+    }
+    .navbar-header {
+        width: 100vw;
+    }
+    .stayfit {
+        display: none;
+    }
+    .tagline {
+        font-size: 4.5rem !important;
+        line-height: 5rem !important;
+        margin-top: 100% !important
+    }
+    .mission,
+    .vision {
+        margin-left: 0
+    }
 }
 
 @media screen and (max-width: 800px) {
+    .contact .col-md-6,
+    .contact .col-md-12 {
+        padding: 0
+    }
     .storyHead {
         font-size: 3rem
     }
