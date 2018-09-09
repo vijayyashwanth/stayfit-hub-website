@@ -364,12 +364,29 @@
                         <div class="col-md-6">
                             <label for="name">Your Name</label>
                             <input type="text" id="name">
-                            <label for="name">Your Email</label>
-                            <input type="text" id="email">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email">
+                            <label for="contact">Your Mobile</label>
+                            <input type="text" id="mobile">
                         </div>
                         <div class="col-md-6">
-                            <label for="name">Your Message</label>
-                            <textarea name="" id="message" cols="10" rows="5"></textarea>
+                            <label for="age">Age</label>
+                            <input type="text" name="" id="age">
+                            <label for="prefferedGym">Peferred Gym</label>
+                            <select name="" id="preferredGym">
+                                <option value="Crossfit">Crossfit</option>
+                                <option value="Cardio">Cardio</option>
+                                <option value="MMA">MMA</option>
+                                <option value="Strength Training">Strength Training</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Zumba">Zumba</option>
+                            </select>
+                            <label for="prefferedLocation">Peferred Gym</label>
+                            <select name="" id="preferredLocation">
+                                <option value="Arekere">Arekere</option>
+                                <option value="Ramanagar">Ramanagar</option>
+                            </select>
+
                         </div>
                         <div class="col-md-12">
                             <button onclick="submitForm()">Submit</button>
@@ -419,11 +436,45 @@
     function submitForm() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-        if (!name || !email || !message) {
+        var contact = document.getElementById('mobile').value;
+        var age = document.getElementById('age').value;
+        var preferredGym = document.getElementById('preferredGym').value;
+        var preferredLocation = document.getElementById('preferredLocation').value;
+        var formData = {
+            "name": name,
+            "email": email,
+            "mobileNo": contact,
+            "age": age,
+            "preferredGym": preferredGym,
+            "location": preferredLocation
+        }
+        console.log(formData)
+        if (!name || !email || !contact || !age || !preferredGym || !preferredLocation) {
             alert("All fields are mandatory.")
         } else {
-            alert("Form submission is currently unavailable. Please try later.")
+            console.log(formData.toString())
+            console.log(typeof(formData))
+            var settings = {
+                "url": "http://stayfitapp.k8iwjdfpvp.us-east-2.elasticbeanstalk.com/hub",
+                "method": "POST",
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "processData": false,
+                "data": JSON.stringify(formData)
+            }
+
+            $.ajax(settings).done(function(response) {
+                if (response == "OK") {
+                    alert("Form submission successful.")
+                    document.getElementById('name').value = ''
+                    document.getElementById('email').value = ''
+                    document.getElementById('mobile').value = ''
+                    document.getElementById('age').value = ''
+                    document.getElementById('preferredGym').value = ''
+                    document.getElementById('preferredLocation').value = ''
+                } else("An error has occured.")
+            });
         }
     }
 </script>

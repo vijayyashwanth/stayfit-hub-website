@@ -505,14 +505,22 @@ a:hover {
 
 .contact label,
 .contact input,
-.contact textarea,
-.contact button {
+.contact button,
+.contact select {
     width: 100%;
-    text-align: left
+    text-align: left;
 }
 
 .contact input,
-.contact textarea {
+.contact select {
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 0 !important;
+    border: 0,
+}
+
+.contact input,
+.contact select {
     padding: 1rem;
     margin-bottom: 1rem;
     color: grey
