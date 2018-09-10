@@ -506,7 +506,8 @@ a:hover {
 .contact label,
 .contact input,
 .contact button,
-.contact select {
+.contact select,
+.container textarea {
     width: 100%;
     text-align: left;
 }
@@ -520,7 +521,8 @@ a:hover {
 }
 
 .contact input,
-.contact select {
+.contact select,
+.contact textarea {
     padding: 1rem;
     margin-bottom: 1rem;
     color: grey

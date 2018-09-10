@@ -55,9 +55,11 @@
                 Stayfit is acknowledged for its unrivaled success in providing the finest equipment and fitness knowledge by following a globally proven fitness training module with state-of-the-art infrastructure and delivery methodology and continuous upgradation through
                 training programs. Stayfit Hub is an ultimate destination to refresh you Mind, Body and Soul. Become a part of our family as a franchise to see the full benefits of a structured company.
             </div>
-            <div class="secButton">
-                SIGNUP
-            </div>
+            <a href="contact.html">
+                <div class="secButton">
+                    SIGNUP
+                </div>
+            </a>
         </div>
         <div class="secRight">
             <img src="assets/bodyMan.png" alt="" srcset="">
@@ -366,27 +368,10 @@
                             <input type="text" id="name">
                             <label for="email">Your Email</label>
                             <input type="email" id="email">
-                            <label for="contact">Your Mobile</label>
-                            <input type="text" id="mobile">
                         </div>
                         <div class="col-md-6">
-                            <label for="age">Age</label>
-                            <input type="text" name="" id="age">
-                            <label for="prefferedGym">Peferred Gym</label>
-                            <select name="" id="preferredGym">
-                                <option value="Crossfit">Crossfit</option>
-                                <option value="Cardio">Cardio</option>
-                                <option value="MMA">MMA</option>
-                                <option value="Strength Training">Strength Training</option>
-                                <option value="Yoga">Yoga</option>
-                                <option value="Zumba">Zumba</option>
-                            </select>
-                            <label for="prefferedLocation">Peferred Gym</label>
-                            <select name="" id="preferredLocation">
-                                <option value="Arekere">Arekere</option>
-                                <option value="Ramanagar">Ramanagar</option>
-                            </select>
-
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5"></textarea>
                         </div>
                         <div class="col-md-12">
                             <button onclick="submitForm()">Submit</button>
@@ -436,20 +421,17 @@
     function submitForm() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
-        var contact = document.getElementById('mobile').value;
-        var age = document.getElementById('age').value;
-        var preferredGym = document.getElementById('preferredGym').value;
-        var preferredLocation = document.getElementById('preferredLocation').value;
+        var message = document.getElementById('message').value;
         var formData = {
             "name": name,
             "email": email,
-            "mobileNo": contact,
-            "age": age,
-            "preferredGym": preferredGym,
-            "location": preferredLocation
+            "mobileNo": '0000000000',
+            "age": '00',
+            "preferredGym": message,
+            "location": 'NA'
         }
         console.log(formData)
-        if (!name || !email || !contact || !age || !preferredGym || !preferredLocation) {
+        if (!name || !email || !message) {
             alert("All fields are mandatory.")
         } else {
             console.log(formData.toString())
@@ -469,10 +451,7 @@
                     alert("Form submission successful.")
                     document.getElementById('name').value = ''
                     document.getElementById('email').value = ''
-                    document.getElementById('mobile').value = ''
-                    document.getElementById('age').value = ''
-                    document.getElementById('preferredGym').value = ''
-                    document.getElementById('preferredLocation').value = ''
+                    document.getElementById('message').value = ''
                 } else("An error has occured.")
             });
         }
