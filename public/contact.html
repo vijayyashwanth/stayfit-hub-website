@@ -125,32 +125,17 @@
             alert("All fields are mandatory.")
             document.getElementById('name').focus()
         } else {
-            // console.log(formData.toString())
-            // console.log(typeof(formData))
-            var settings = {
-                "url": "http://sf-servicesapp.screqvrs8e.us-east-2.elasticbeanstalk.com/hubForms",
-                "method": "POST",
-                "headers": {
-                    "Content-Type": "application/json"
-                },
-                "processData": false,
-                "data": JSON.stringify(formData)
-            }
-
-            $.ajax(settings).done(function(response) {
-                if (response == "OK") {
-                    alert("Thank you. We will contact you soon.")
-                    document.getElementById('name').value = ''
-                    document.getElementById('email').value = ''
-                    document.getElementById('mobile').value = ''
-                    document.getElementById('age').value = ''
-                    document.getElementById('preferredGym').value = ''
-                    document.getElementById('preferredLocation').value = ''
-                } else {
-                    alert("An network error occured. Try again later, please.")
-                }
-            });
+            window.setTimeout(function () {
+                document.getElementById('name').value = ''
+                document.getElementById('email').value = ''
+                document.getElementById('mobile').value = ''
+                document.getElementById('age').value = ''
+                document.getElementById('preferredGym').value = ''
+                document.getElementById('location').value = ''
+                alert("Thank you. We will contact you soon.")
+            }, 600)
         }
+
     }
 </script>
 
