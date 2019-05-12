@@ -20,10 +20,10 @@
     <nav class="navbar navbar-inverse">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>                        
-                    </button>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#"><img src="assets/logo.png" alt=""></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -81,36 +81,29 @@
             <div class="socialMedia">
                 <ul>
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/STAYFITFITNESSACADEMY/"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/stayfithubworldofwellness/"><i class="fa fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/stayfithubworldofwellness/"><i class="fa fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="fa fa-google-plus"></i></a>
+                        <a target="blank" href="https://www.instagram.com/stayfit_hub/ "><i class="fa fa-instagram"></i></a>
                     </li>
                 </ul>
             </div>
             <div class="address">
-                Admission cell, StayfitHub Cell<br> Bangalore – 560 041 <br> Phone: +91-8722072000, +91-8722073000 <br> Email: stayfit@stayfitindia.com
+                Admission cell, StayfitHub Cell<br>
+                Bangalore – 560 041 <br>
+                Phone: +91-8722072000, +91-8722073000 <br>
+                Email: stayfithub@stayfitindia.com
             </div>
         </div>
     </div>
     <div class="footer">
-        Copyright© 2017 Stayfit. All Rights Reserved.
+        Copyright &copy; 2019 Stayfit. All Rights Reserved.
     </div>
 </body>
 <script>
-    var elements = document.getElementsByClassName("abt");
-    var maxHeight = 0;
-    for (var i = 0; i < elements.length; i++) {
-        console.log(elements[i].clientHeight)
-        if (elements[i].clientHeight > maxHeight)
-            maxHeight = elements[i].clientHeight;
-    }
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.height = maxHeight + "px"
-    }
 
     function submitForm() {
         var name = document.getElementById('name').value;
@@ -127,12 +120,13 @@
             "preferredGym": preferredGym,
             "location": preferredLocation
         }
-        console.log(formData)
+        // console.log(formData)
         if (!name || !email || !contact || !age || !preferredGym || !preferredLocation) {
             alert("All fields are mandatory.")
+            document.getElementById('name').focus()
         } else {
-            console.log(formData.toString())
-            console.log(typeof(formData))
+            // console.log(formData.toString())
+            // console.log(typeof(formData))
             var settings = {
                 "url": "http://sf-servicesapp.screqvrs8e.us-east-2.elasticbeanstalk.com/hubForms",
                 "method": "POST",
@@ -145,14 +139,16 @@
 
             $.ajax(settings).done(function(response) {
                 if (response == "OK") {
-                    alert("Form submission successful.")
+                    alert("Thank you. We will contact you soon.")
                     document.getElementById('name').value = ''
                     document.getElementById('email').value = ''
                     document.getElementById('mobile').value = ''
                     document.getElementById('age').value = ''
                     document.getElementById('preferredGym').value = ''
                     document.getElementById('preferredLocation').value = ''
-                } else("An error has occured.")
+                } else {
+                    alert("An network error occured. Try again later, please.")
+                }
             });
         }
     }

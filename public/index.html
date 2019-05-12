@@ -15,7 +15,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="script/script.js"></script>
-    <!-- Facebook Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -32,7 +31,6 @@
         <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=706358173151592&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- End Facebook Pixel -->
 </head>
 
 <body>
@@ -99,11 +97,13 @@
                 Founded on June 24th 1996, STAYFIT has served innumerable customers and helped
                 set up Fitness Centers across India. The company has supplied gym equipments
                 for prestigious clientele from defense sector to elite educational institutions/universities,
-                hotels and resorts to clubs and gyms.<br><br>
+                hotels and resorts to clubs and gyms.
+                <br><br>
 
-                With well over 2 decades of excellence in the fitness industry, Stayfit has come up with a Stayfit
-                Hub, which is an ultimate destination for people to get into healthier lifestyle,
-                with a vision of 100 clubs over the country in next 5 years.<br><br>
+                With well over 2 decades of excellence in the fitness industry,
+                Stayfit has come up with a Stayfit Hub, which is an ultimate destination for people
+                to get into healthier lifestyle, with a vision of 100 clubs over the country in next 5 years.
+                <br><br>
 
                 As the complete fitness solution, Stayfit Hub is focused on getting people the best
                 results they want. Top of the line equipment, best in class personal training programs,
@@ -124,7 +124,7 @@
     </div>
     <div class="about" id="services">
         <div class="row">
-            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt1">
                 <div class="aboutIcon">
                     <img src="assets/icon1.png" alt="" srcset="">
                 </div>
@@ -135,10 +135,11 @@
 
                 </div>
                 <div class="aboutText">
-                    CrossFit is a training program that builds strength and conditioning through extremely varied and challenging workouts.
+                    CrossFit is a training program that builds strength and conditioning
+                    through extremely varied and challenging workouts.
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt2">
                 <div class="aboutIcon">
                     <img src="assets/icon2.png" alt="" srcset="">
                 </div>
@@ -149,10 +150,11 @@
 
                 </div>
                 <div class="aboutText">
-                    Cardio exercise is one of the most important things you can do for your body, whether you want to lose weight or burn fat
+                    Cardio exercise is one of the most important things you
+                    can do for your body, whether you want to lose weight or burn fat
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt3">
                 <div class="aboutIcon">
                     <img src="assets/icon4.png" alt="" srcset="">
                 </div>
@@ -163,11 +165,11 @@
 
                 </div>
                 <div class="aboutText">
-                    Strength training is combination of compound movements, high-intensity training with world-class workout.
-
+                    Strength training is combination of compound movements,
+                    high-intensity training with world-class workout.
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt4">
                 <div class="aboutIcon">
                     <img src="assets/mma.png" alt="" srcset="">
                 </div>
@@ -178,10 +180,11 @@
 
                 </div>
                 <div class="aboutText">
-                    Mixed martial arts is a full-contact combat sport that allows striking and grappling, both standing and on the ground.
+                    Mixed martial arts is a full-contact combat sport that allows
+                    striking and grappling, both standing and on the ground.
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection abt" id="abt5">
                 <div class="aboutIcon">
                     <img src="assets/yoga.png" alt="" srcset="">
                 </div>
@@ -192,10 +195,11 @@
 
                 </div>
                 <div class="aboutText">
-                    Yoga all levels, all bodies, all genders, all souls! it soothes your mood and makes you start a journey toward healing..
+                    Yoga all levels, all bodies, all genders, all souls!
+                    It soothes your mood and makes you start a journey toward healing.
                 </div>
             </div>
-            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt">
+            <div class="col-md-2 col-xs-6 aboutSection1 abt" id="abt6">
                 <div class="aboutIcon">
                     <img src="assets/zumba.png" alt="" srcset="">
                 </div>
@@ -206,7 +210,8 @@
 
                 </div>
                 <div class="aboutText">
-                    Dance to great music, people and our world class trained trainers, and burn a ton of calories without even realizing it.
+                    Dance to great music, people and our world class trained trainers,
+                    and burn a ton of calories without even realizing it.
                 </div>
             </div>
         </div>
@@ -445,16 +450,18 @@
     </div>
 </body>
 <script>
-    var elements = document.getElementsByClassName("abt");
-    var maxHeight = 0;
-    for (var i = 0; i < elements.length; i++) {
-        console.log(elements[i].clientHeight)
-        if (elements[i].clientHeight > maxHeight)
-            maxHeight = elements[i].clientHeight;
-    }
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].style.height = maxHeight + "px"
-    }
+    $(document).ready(function () {
+        var elements = document.getElementsByClassName("abt");
+        var maxHeight = 0;
+        for (var i = 0; i < elements.length; i++) {
+            // console.log(elements[i].clientHeight)
+            if (elements[i].clientHeight > maxHeight)
+                maxHeight = elements[i].clientHeight;
+        }
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.height = maxHeight + "px"
+        }
+    });
 
     function submitForm() {
         var name = document.getElementById('name').value;
@@ -468,12 +475,13 @@
             "preferredGym": message,
             "location": 'NA'
         }
-        console.log(formData)
+        // console.log(formData)
         if (!name || !email || !message) {
             alert("All fields are mandatory.")
+            document.getElementById('name').focus()
         } else {
-            console.log(formData.toString())
-            console.log(typeof(formData))
+            // console.log(formData.toString())
+            // console.log(typeof(formData))
             var settings = {
                 "url": "http://sf-servicesapp.screqvrs8e.us-east-2.elasticbeanstalk.com/hubForms",
                 "method": "POST",
@@ -486,11 +494,13 @@
 
             $.ajax(settings).done(function(response) {
                 if (response == "OK") {
-                    alert("Form submission successful.")
+                    alert("Thank you. We will contact you soon.")
                     document.getElementById('name').value = ''
                     document.getElementById('email').value = ''
                     document.getElementById('message').value = ''
-                } else("An error has occured.")
+                } else {
+                    alert("An network error occured. Try again later, please.")
+                }
             });
         }
     }
