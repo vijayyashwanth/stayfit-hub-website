@@ -5,15 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stayfit Hub</title>
+    <link rel="canonical" href="https://stayfitindia.com" />
+    <title>Stayfit HUB | Best Personal Trainers | Gym in Arekere</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script/script.js"></script>
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '706358173151592');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=706358173151592&ev=PageView&noscript=1"/>
+    </noscript>
 </head>
 
 <body>
@@ -24,7 +41,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="assets/logo.png" alt=""></a>
+            <a class="navbar-brand" href="/"><img src="assets/logo.png" alt="Stafit"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -49,8 +66,8 @@
                             <input type="text" id="mobile">
                         </div>
                         <div class="col-md-6">
-                            <label for="age">Age</label>
-                            <input type="text" name="" id="age">
+                            <!-- <label for="age">Age</label>
+                            <input type="text" name="" id="age"> -->
                             <label for="prefferedGym">Peferred Workout</label>
                             <select name="" id="preferredGym">
                                 <option value="Crossfit">Crossfit</option>
@@ -81,13 +98,21 @@
             <div class="socialMedia">
                 <ul>
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/stayfithubworldofwellness/"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/stayfithubfitnesscenter">
+                            <i class="fa fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://twitter.com/StayfitH"><i class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://twitter.com/StayfitH">
+                            <i class="fa fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a target="blank" href="https://www.instagram.com/stayfit_hub/ "><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="https://instagram.com/stayfit_hub_fitness_center">
+                            <i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=hL9sOeZurFY">
+                            <i class="fa fa-youtube"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -104,24 +129,23 @@
     </div>
 </body>
 <script>
-
     function submitForm() {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var contact = document.getElementById('mobile').value;
-        var age = document.getElementById('age').value;
+        // var age = document.getElementById('age').value;
         var preferredGym = document.getElementById('preferredGym').value;
         var preferredLocation = document.getElementById('preferredLocation').value;
         var formData = {
             "name": name,
             "email": email,
             "mobileNo": contact,
-            "age": age,
+            // "age": age,
             "preferredGym": preferredGym,
             "location": preferredLocation
         }
         // console.log(formData)
-        if (!name || !email || !contact || !age || !preferredGym || !preferredLocation) {
+        if (!name || !email || !contact || !preferredGym || !preferredLocation) {
             alert("All fields are mandatory.")
             document.getElementById('name').focus()
         } else {
@@ -130,7 +154,7 @@
                 document.getElementById('name').value = ''
                 document.getElementById('email').value = ''
                 document.getElementById('mobile').value = ''
-                document.getElementById('age').value = ''
+                // document.getElementById('age').value = ''
                 document.getElementById('preferredGym').value = ''
                 document.getElementById('preferredLocation').value = ''
                 alert("Thank you. We will contact you soon.")
@@ -139,5 +163,14 @@
         return true
     }
 </script>
-
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122845976-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-122845976-2');
+</script>
 </html>
