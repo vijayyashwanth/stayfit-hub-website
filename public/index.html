@@ -297,7 +297,7 @@
                             <i class="fa fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://www.youtube.com/watch?v=hL9sOeZurFY">
+                        <a target="_blank" href="https://www.youtube.com/channel/UCX35UwaVzdCfqHZngVpCNgQ">
                             <i class="fa fa-youtube"></i>
                         </a>
                     </li>
@@ -306,7 +306,7 @@
             <div class="address">
                 Admission cell, StayfitHub Cell<br>
                 Bangalore – 560 041 <br>
-                Phone: +91-8722072000, +91-8722073000 <br>
+                Phone: +91-8722819000, +91-9900111929<br>
                 Email: stayfithub@stayfitindia.com
             </div>
         </div>
@@ -322,7 +322,6 @@
             var elements = document.getElementsByClassName("abt");
             var maxHeight = 0;
             for (var i = 0; i < elements.length; i++) {
-                // console.log(elements[i].clientHeight)
                 if (elements[i].clientHeight > maxHeight)
                     maxHeight = elements[i].clientHeight;
             }
@@ -331,12 +330,12 @@
             }
             var callusctrl = $('#callus')
             if (ismobile()) {
-                callusctrl.html('<a href="tel:+918722072000">CALL US</a>')
+                callusctrl.html('<a href="tel:+918722819000">CALL US</a>')
             } else {
                 callusctrl.click(function () {
                     if (callusctrl.data('status') === 'callus') {
-                        callusctrl.data('status', 'phone')
-                        callusctrl.text('+91-8722072000 / +91-8722073000')
+						callusctrl.data('status', 'phone')
+                        callusctrl.text('+91-8722819000 / +91-9900111929')
                     } else {
                         callusctrl.text('CALL US')
                         callusctrl.data('status', 'callus')
