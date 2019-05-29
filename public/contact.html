@@ -131,51 +131,51 @@
     <div class="footer">
         Copyright &copy; 2019 Stayfit. All Rights Reserved.
     </div>
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var contact = document.getElementById('mobile').value;
+            // var age = document.getElementById('age').value;
+            var preferredGym = document.getElementById('preferredGym').value;
+            var preferredLocation = document.getElementById('preferredLocation').value;
+            var formData = {
+                "name": name,
+                "email": email,
+                "mobileNo": contact,
+                // "age": age,
+                "preferredGym": preferredGym,
+                "location": preferredLocation
+            }
+            // console.log(formData)
+            if (!name || !email || !contact || !preferredGym || !preferredLocation) {
+                alert("All fields are mandatory.")
+                document.getElementById('name').focus()
+            } else {
+                console.log(JSON.stringify(formData,0,2));
+                window.setTimeout(function () {
+                    document.getElementById('name').value = ''
+                    document.getElementById('email').value = ''
+                    document.getElementById('mobile').value = ''
+                    // document.getElementById('age').value = ''
+                    document.getElementById('preferredGym').value = ''
+                    document.getElementById('preferredLocation').value = ''
+                    alert("Thank you. We will contact you soon.")
+                    // window.location.href = "thankyou.html"
+                }, 600)
+            }
+            return true
+        }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122845976-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-122845976-2');
+    </script>
 </body>
-<script>
-    function submitForm() {
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var contact = document.getElementById('mobile').value;
-        // var age = document.getElementById('age').value;
-        var preferredGym = document.getElementById('preferredGym').value;
-        var preferredLocation = document.getElementById('preferredLocation').value;
-        var formData = {
-            "name": name,
-            "email": email,
-            "mobileNo": contact,
-            // "age": age,
-            "preferredGym": preferredGym,
-            "location": preferredLocation
-        }
-        // console.log(formData)
-        if (!name || !email || !contact || !preferredGym || !preferredLocation) {
-            alert("All fields are mandatory.")
-            document.getElementById('name').focus()
-        } else {
-            console.log(JSON.stringify(formData,0,2));
-            window.setTimeout(function () {
-                document.getElementById('name').value = ''
-                document.getElementById('email').value = ''
-                document.getElementById('mobile').value = ''
-                // document.getElementById('age').value = ''
-                document.getElementById('preferredGym').value = ''
-                document.getElementById('preferredLocation').value = ''
-                alert("Thank you. We will contact you soon.")
-                // window.location.href = "thankyou.html"
-            }, 600)
-        }
-        return true
-    }
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122845976-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-122845976-2');
-</script>
 </html>
