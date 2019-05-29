@@ -30,6 +30,17 @@
         <img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=706358173151592&ev=PageView&noscript=1"/>
     </noscript>
+    <style>
+    .xfooter {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #707170;
+        color: white;
+        text-align: center;
+    }
+    </style>
 </head>
 
 <body>
@@ -50,49 +61,13 @@
     </nav>
     <div class="contact" id="contact"> <!-- style="padding-top: 16rem; padding-bottom: 8rem" -->
         <div class="container contactContainer">
-            <div class="row" style="padding-top: 4rem; padding-bottom: 4rem; font-size: 120%">
-                    Making sweating enjoyable drives everything HUB does.<br/>
-                    More than just a gym, it provides outstanding fitness
-                    spaces that members feel are their own.<br/> Contact us now!
-            </div>
-            <div class="row">
-                <div class="contactFormHead">
-                    Sign up! We will get in touch with you.
-                </div>
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="row" style="padding-top: 2rem; padding-bottom: 6rem">
-                        <div class="col-md-6">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email">
-                            <label for="mobile">Your Mobile</label>
-                            <input type="text" id="mobile">
-                        </div>
-                        <div class="col-md-6">
-                            <!-- <label for="age">Age</label>
-                            <input type="text" name="" id="age"> -->
-                            <label for="prefferedGym">Peferred Workout</label>
-                            <select name="" id="preferredGym">
-                                <option value="Crossfit">Crossfit</option>
-                                <option value="Cardio">Cardio</option>
-                                <option value="MMA">MMA</option>
-                                <option value="Strength Training">Strength Training</option>
-                                <option value="Yoga">Yoga</option>
-                                <option value="Zumba">Zumba</option>
-                            </select>
-                            <label for="prefferedLocation">Peferred Location</label>
-                            <select name="" id="preferredLocation">
-                                <option value="Arekere">Arekere</option>
-                                <option value="Ramanagar">Ramanagar</option>
-                            </select>
-
-                        </div>
-                        <div class="col-md-12">
-                            <button onclick="submitForm()">Submit</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="row thankyou" style="padding-top: 4rem; padding-bottom: 4rem; font-size: 180%; ">
+                <br/>
+                <br/>
+                Thank you for your information. <br/>
+                We will be in touch with you soon.
+                <br/>
+                <br/>
             </div>
         </div>
         <div class="contactLogo">
@@ -128,40 +103,22 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class='xfooter'>
         Copyright &copy; 2019 Stayfit. All Rights Reserved.
     </div>
     <script>
-        function submitForm() {
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var contact = document.getElementById('mobile').value;
-            var preferredGym = document.getElementById('preferredGym').value;
-            var preferredLocation = document.getElementById('preferredLocation').value;
-            var formData = {
-                "name": name,
-                "email": email,
-                "mobileNo": contact,
-                "preferredGym": preferredGym,
-                "location": preferredLocation
+        $(function() {
+            var elements = document.getElementsByClassName("thankyou");
+            var maxHeight = 0;
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].clientHeight > maxHeight)
+                    maxHeight = elements[i].clientHeight;
             }
-            // console.log(formData)
-            if (!name || !email || !contact || !preferredGym || !preferredLocation) {
-                alert("All fields are mandatory.")
-                document.getElementById('name').focus()
-            } else {
-                console.log(JSON.stringify(formData,0,2));
-                window.setTimeout(function () {
-                    document.getElementById('name').value = ''
-                    document.getElementById('email').value = ''
-                    document.getElementById('mobile').value = ''
-                    document.getElementById('preferredGym').value = ''
-                    document.getElementById('preferredLocation').value = ''
-                    window.location.href = "/thankyou.html"
-                }, 600)
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.height = maxHeight + "px"
             }
-            return true
-        }
+            alert('!')
+        })
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122845976-2"></script>
